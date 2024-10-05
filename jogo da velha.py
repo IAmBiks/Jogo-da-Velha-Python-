@@ -1,12 +1,19 @@
 import random
-import os
-import time
+from os import system,name
+from time import sleep
 
+def derrota():
+    print('você perdeu')
+    x = input('aperte qualquer ENTER para sair')
+
+def vitoria():
+    print('você ganhou!!!')
+    x = input('aperte qualquer ENTER para sair')
 
 tabu2 =[1, 2, 3, 4, 5, 6, 7, 8, 9]
 tabu = tabu2
 while True:
-    os.system('cls' if os.name == 'nt' else 'clear')
+    system('cls' if name == 'nt' else 'clear')
     #ascii do jogo da velha(parte mais dificil)
     print('+-------+-------+-------+'
           '\n|       |       |       |'
@@ -40,68 +47,52 @@ while True:
             break
     # analise pessoa
     if tabu[0] == 'X' and tabu[1] == 'X' and tabu[2] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[3] == 'X' and tabu[4] == 'X' and tabu[5] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[6] == 'X' and tabu[7] == 'X' and tabu[8] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[0] == 'X' and tabu[3] == 'X' and tabu[6] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[1] == 'X' and tabu[4] == 'X' and tabu[7] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[2] == 'X' and tabu[5] == 'X' and tabu[8] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[0] == 'X' and tabu[4] == 'X' and tabu[8] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     elif tabu[2] == 'X' and tabu[4] == 'X' and tabu[6] == 'X':
-        print('Você ganhou!!!!')
-        input('aperte qualquer tecla para sair')
+        vitoria()
         break
     # analise computador
     elif tabu[0] == 'O' and tabu[1] == 'O' and tabu[2] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[3] == 'O' and tabu[4] == 'O' and tabu[5] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[6] == 'O' and tabu[7] == 'O' and tabu[8] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[0] == 'O' and tabu[3] == 'O' and tabu[6] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[1] == 'O' and tabu[4] == 'O' and tabu[7] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[2] == 'O' and tabu[5] == 'O' and tabu[8] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[0] == 'O' and tabu[4] == 'O' and tabu[8] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
     elif tabu[2] == 'O' and tabu[4] == 'O' and tabu[6] == 'O':
-        print('você perdeu')
-        input('aperte qualquer tecla para sair')
+        derrota()
         break
 
