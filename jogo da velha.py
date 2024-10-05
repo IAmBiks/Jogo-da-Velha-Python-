@@ -1,4 +1,4 @@
-import random
+from random import randrange
 from os import system,name
 from time import sleep
 
@@ -39,7 +39,7 @@ while True:
             break
     # verificação da maquina para não escolher o mesmo numero
     while True:
-        escov = random.randrange(1, 9)
+        escov = randrange(1, 9)
         if tabu[escov - 1] == 'X' or tabu[escov - 1] == 'O':
             continue
         else:
